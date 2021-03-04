@@ -23,13 +23,18 @@
   .search
     &__input
       width: 340px
-@media (max-width: 768px)
+      
+@media (max-width: 767px)
   .container
     max-width: 576px
-    width: 92%
+    width: 88%
   .navbar
     &__search, &-menu, &__user
       display: none
+    &-top
+      padding: 22px 0
+      // .logo__image
+      //   height: 13px
   .menu
     &-button
       display: flex
@@ -39,6 +44,7 @@
       align-item: center
       justify-content: space-between
       flex-direction: column
+      align-self: flex-end
       border: none
       background-color: $light
       cursor: pointer

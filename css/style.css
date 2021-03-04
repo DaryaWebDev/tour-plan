@@ -438,6 +438,7 @@ img {
   padding-right: 75px;
   background-color: #F5FAFE;
   border: none;
+  outline: none;
   font-size: 12px;
   line-height: 15px;
   color: #333333;
@@ -449,6 +450,7 @@ img {
   right: 0;
   width: 65px;
   height: 100%;
+  cursor: pointer;
   border: none;
   background-color: #EC1F46;
 }
@@ -511,13 +513,16 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     max-width: 576px;
-    width: 92%;
+    width: 88%;
   }
   .navbar__search, .navbar-menu, .navbar__user {
     display: none;
+  }
+  .navbar-top {
+    padding: 22px 0;
   }
   .menu-button {
     display: -webkit-box;
@@ -534,6 +539,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     border: none;
     background-color: #fff;
     cursor: pointer;
