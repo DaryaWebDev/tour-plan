@@ -706,6 +706,13 @@ img {
             order: -1;
     margin-left: 0;
   }
+  .breadcrumb-list {
+    padding-top: 27px;
+  }
+  .hotel {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
 }
 
 @media (max-width: 576px) {
