@@ -807,11 +807,10 @@ img {
   cursor: pointer;
 }
 
-.map {
+#map {
   border-radius: 10px;
   width: 347px;
   height: 210px;
-  background-color: #000;
   overflow: hidden;
 }
 
@@ -892,7 +891,7 @@ img {
   .slider {
     width: 100%;
   }
-  .map {
+  #map {
     width: 340px;
   }
 }
@@ -994,7 +993,7 @@ img {
     position: relative;
     right: 4px;
   }
-  .map {
+  #map {
     width: 100%;
   }
 }
