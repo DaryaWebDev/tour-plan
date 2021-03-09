@@ -1008,5 +1008,11 @@ img {
   .hotel__slider {
     margin-bottom: 20px;
   }
+  #map {
+    max-height: 173px;
+  }
+  .hotel-right {
+    min-height: 403px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
