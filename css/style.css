@@ -719,14 +719,12 @@ img {
 }
 
 .booking__pricetag {
-  font-style: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 33px;
 }
 
 .booking__per-room {
-  font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 9px;
@@ -747,7 +745,6 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 8px;
-  font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
@@ -771,7 +768,6 @@ img {
 }
 
 .booking__heading {
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -814,7 +810,7 @@ img {
 .map {
   border-radius: 10px;
   width: 347px;
-  height: 213px;
+  height: 210px;
   background-color: #000;
   overflow: hidden;
 }
@@ -884,7 +880,14 @@ img {
             flex-direction: row;
   }
   .booking {
+    padding-top: 29px;
+    padding-right: 22px;
+    padding-bottom: 26px;
+    padding-left: 23px;
     width: 340px;
+  }
+  .booking__room {
+    margin-top: 3px;
   }
   .slider {
     width: 100%;
@@ -978,8 +981,18 @@ img {
             flex-direction: column;
     min-height: 450px;
   }
+  .hotel-grid {
+    padding-top: 18px;
+  }
+  .hotel .slider {
+    height: 179px;
+  }
   .booking {
     width: 100%;
+  }
+  .booking__number {
+    position: relative;
+    right: 4px;
   }
   .map {
     width: 100%;
