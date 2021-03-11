@@ -1394,7 +1394,7 @@ img {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
-  .card {
+  .activities .card {
     width: 49%;
     height: 255px;
   }
