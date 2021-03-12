@@ -1,0 +1,105 @@
+.packages
+  padding: 40px 0 70px 0
+  color: $light
+  &__title
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 65px
+    color: $text-color
+  &__subtitle
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    margin-bottom: 23px
+    &_first
+      margin-bottom: 27px
+  &-item
+    display: grid
+    height: 1030px
+    grid-template-rows: 500px 500px
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "first first second" "third fourth fifth"
+    grid-gap: 30px
+    &__rating
+      display: flex
+      width: 8px
+      height: 8px
+      margin-bottom: 4px      
+    &__stars
+      margin-right: 2px
+    &__word
+      font-weight: normal
+      font-size: 14px
+      line-height: 160.6%
+      margin-bottom: 34px
+    &__offer
+      position: absolute
+      left: 0
+      top: 26px
+      z-index: 2
+      background-color: $primary
+      padding: 4px 9px
+      font-weight: 600
+      font-size: 8px
+      line-height: 10px
+      border-radius: 0 4px 4px 0
+      &_first
+        padding: 8px 21px 7px 11px
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+    &__about
+      padding: 46px 21px 30px 44px
+      max-width: 365px
+      background-color: $dark
+    &__info
+      padding: 30px 21px 25px 32px
+      background-color: $dark
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px  
+    &__room
+      margin-bottom: 24px
+    &__text
+      margin-bottom: 8px
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__icon
+      display: inline-block
+      margin-right: 10px
+    &__photo
+      position: relative
+      max-width: 350px
+      max-height: 250px
+      &_first
+        max-height: 500px
+        max-width: 366px
+    &__img
+      width: 100%
+      height: 250px
+      //height: 100%
+      object-fit: cover
+      &_first
+        height: 100%      
+    &__card
+      display: flex
+      flex-direction: column
+      max-height: 500px
+      border-radius: 8px
+      overflow: hidden
+      &_first
+        display: flex
+        flex-direction: row
+        grid-area: first        
+      &_second
+        grid-area: second        
+      &_third
+        grid-area: third        
+      &_fourth
+        grid-area: fourth 
+      &_fifth
+        grid-area: fifth 
