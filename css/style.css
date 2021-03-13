@@ -918,6 +918,10 @@ img {
   margin-bottom: 24px;
 }
 
+.packages-item__room_first {
+  margin-bottom: 38px;
+}
+
 .packages-item__text {
   margin-bottom: 8px;
   font-weight: normal;
@@ -927,7 +931,7 @@ img {
 
 .packages-item__icon {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .packages-item__sale {
@@ -960,6 +964,10 @@ img {
   outline: none;
   border-radius: 4px;
   color: #fff;
+}
+
+.packages-item__button_first {
+  right: 0;
 }
 
 .packages-item__photo {
