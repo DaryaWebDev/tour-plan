@@ -12,6 +12,12 @@
     .card
       width: 230px
       height: 230px
+  .packages
+    &-item
+      &__button
+        padding: 8px 20px 8px 20px
+      &__price
+        max-width: 130px
 
 @media (max-width: 992px)
   .container, 
@@ -98,6 +104,20 @@
       height: 255px
       &__title
         width: 160px
+  .packages
+    padding-top: 30px
+    &__title
+      font-size: 30px
+    &-item
+      display: grid
+      grid-template-rows: minmax(500px, auto) minmax(500px, auto) minmax(500px, auto)
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "first first" "second third" "fourth fifth"
+      grid-gap: 25px
+      &__photo
+        &_first
+          min-width: 350px
+
 
 @media (max-width: 767px)
   .container
@@ -194,6 +214,44 @@
     .card
       width: 49%
       height: 255px
+  .packages
+    padding-bottom: 40px
+    &__subtitle
+      &_first
+        margin-bottom: 20px
+    &-item
+      grid-gap: 15px
+      &__img
+        &_first
+          //min-height: 100%
+      &__card
+        &_first
+          display: flex
+          flex-direction: column      
+      &__about
+        max-width: 576px
+        min-height: 390px
+        padding-top: 30px 
+      &__photo
+        &_first
+          max-width: 576px
+          min-height: 33%
+      &__price
+        max-width: 110px
+        &_first
+          max-width: 70%
+      &__word
+        margin-bottom: 20px
+      &__room
+        &_first
+          margin-bottom: 30px
+      &__offer
+        font-size: 12px
+        padding: 6px 12px
+        &_first
+          font-size: 14px
+          padding: 10px 22px 8px 12px
+
 
 @media (max-width: 576px)
   .logo
@@ -250,4 +308,18 @@
       font-weight: bold
       font-size: 18px
       line-height: 23px
+  .packages
+    &-item
+      grid-template-rows: repeat(5, minmax(500px, auto))
+      grid-template-columns: 1fr
+      grid-template-areas: "first" "second" "third" "fourth" "fifth"
+      &__photo
+        max-width: 100%
 
+@media (max-width: 320px)
+  .packages
+    &-item
+      &__about
+        padding: 30px 20px 
+      &__price
+        max-width: 55%
