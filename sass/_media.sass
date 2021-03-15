@@ -18,7 +18,9 @@
         padding: 8px 20px 8px 20px
       &__price
         max-width: 130px
-
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 992px)
   .container, 
   .newsletter-wrapper
@@ -94,7 +96,7 @@
         &--next
           right: 0
   .activities
-    padding-bottom: 70px
+    padding-bottom: 50px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -117,6 +119,55 @@
       &__photo
         &_first
           min-width: 350px
+  .footer
+    padding-top: 70px
+    &__title
+      margin-top: 10px
+    &__form
+      max-width: 539px
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+      grid-column-gap: 0px
+    &__input
+      flex-basis: 47%
+    &__logo
+      width: 98px
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        margin-left: -52px
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+        margin-left: 0
+        margin-bottom: 7px
+      &-form
+        grid-column: span 5
+        grid-row: 4
+        margin-left: 0
+        margin-bottom: 63px
+    &__about
+      &-info
+        display: flex
+        justify-content: flex-start
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+    &__pay
+      margin-left: 0
 
 
 @media (max-width: 767px)
@@ -177,8 +228,7 @@
     &-grid
       padding-top: 18px
     &-slider
-      height: 350px 
-      // height: 250px     
+      height: 350px  
   .booking
     width: 100%
     &__number
@@ -222,8 +272,6 @@
     &-item
       grid-gap: 15px
       &__img
-        &_first
-          //min-height: 100%
       &__card
         &_first
           display: flex
@@ -251,6 +299,9 @@
         &_first
           font-size: 14px
           padding: 10px 22px 8px 12px
+  .footer
+    &__input
+      flex-basis: 100%
 
 
 @media (max-width: 576px)
@@ -298,7 +349,7 @@
           margin-right: -88px
   .activities
     padding-top: 40px
-    padding-bottom: 60px
+    padding-bottom: 38px
     .card
       width: 100%
       &:nth-child(2)
@@ -315,6 +366,89 @@
       grid-template-areas: "first" "second" "third" "fourth" "fifth"
       &__photo
         max-width: 100%
+  .footer
+    &__ul
+      &_ml-9
+      margin-left: 0
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+      grid-template-areas: "logo" "social" "legal" "additional" "categories" "contact-details" "contact-form"
+    &__title
+      &_mb-33
+        margin-bottom: 14px
+      &_inline
+        margin-bottom: 21px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+      grid-area: logo
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        margin-left: 0
+        margin-right: 74px
+        margin-top: -2px
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        grid-area: social
+    &__additional
+      margin-top: -10px
+      margin-left: 0
+      grid-row: 3
+      grid-column: 1
+      grid-area: additional
+    &__categories
+      margin-top: -13px
+      grid-row: 4
+      grid-column: 1
+      grid-area: categories
+    &__legal
+      margin-top: -12px
+      grid-row: 5
+      grid-column: 1
+      margin-left: 0
+      grid-area: legal
+    &__contact
+      &-details
+        margin-top: -9px
+        max-width: 280px
+        grid-row: 6
+        grid-column: 1
+        grid-area: contact-details
+      &-form
+        margin-top: 9px
+        margin-bottom: 31px
+        max-width: 284px
+        grid-row: 7
+        grid-column: 1
+        grid-area: contact-form
+    &__input
+      flex-basis: 100%
+      min-width: 281px
+    &__button
+      order: 1
+    &__info
+      order: 0
+      flex-basis: 100%
+      margin-bottom: 13px
+    &__message
+      margin-bottom: 16px
+    &__about
+      &-info
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+    &__pay
+      justify-content: flex-start
+      margin-top: 10px
+    &__disclaim, &__condit 
+      margin-right: 9px
+
+
+
 
 @media (max-width: 320px)
   .packages
