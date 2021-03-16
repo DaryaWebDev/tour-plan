@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <header class="navbar">
+    <header class="navbar navbar_fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -27,7 +27,7 @@
             />
           </a>
 
-          <form action="#" class="search navbar__search">
+          <form action="#" class="search navbar__search navbar__search_mobile_hidden">
             <input
               type="text"
               placeholder="Search Location"
@@ -38,7 +38,7 @@
             </button>
           </form>
 
-          <a href="#" class="user navbar__user">
+          <a href="#" class="user navbar__user navbar__user_mobile_hidden">
             <img
               src="img/user-avatar.jpg"
               alt="Avatar: Nathan"
@@ -61,26 +61,49 @@
         <div class="container">
           <nav class="navbar-menu">
             <ul class="navbar-menu__list">
+              <li class="navbar-menu__item navbar-menu__item_mobile_visible">
+                <a href="#" class="user navbar__user navbar__user_mobile_visible">
+            <img
+              src="img/user-avatar.jpg"
+              alt="Avatar: Nathan"
+              class="user__avatar"
+            />
+            <span class="user__name user__name_light">Nathan</span>
+          </a>
+              </li>
+              <li class="navbar-menu__item navbar-menu__item_mobile_visible navbar-menu__item_w-96">
+                <form action="#" class="search navbar__search navbar__search_mobile_visible">
+            <input
+              type="text"
+              placeholder="Search Location"
+              class="search__input"
+            />
+            <button class="search__button">
+              <img src="img/search.svg" alt="Icon: search" />
+            </button>
+          </form>
+              </li>
+
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">All Deals</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">All Deals</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Hotels</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Hotels</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Activities</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Activities</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Hotel Day Packages</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Restaurants</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Restaurants</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Events</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Events</a>
               </li>
               <li class="navbar-menu__item">
-                <a href="#" class="navbar-menu__link">Rodrigues</a>
+                <a href="#" target = "_blank" rel="nofollow noopener" class="navbar-menu__link">Rodrigues</a>
               </li>
             </ul>
           </nav>

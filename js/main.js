@@ -28,7 +28,6 @@ const reviewsSlider = new Swiper(".reviews-slider", {
   // },
 });
 
-
 ymaps.ready(init);
 function init() {
   // Создание карты.
@@ -66,7 +65,14 @@ function init() {
         iconImageOffset: [-23, -28],
       }
     );
-     myMap.geoObjects
-        .add(myPlacemark)
+  myMap.geoObjects.add(myPlacemark);
 }
 
+var menuButton = document.querySelector(".menu-button"); //ищем этот класс
+menuButton.addEventListener("click", function () {
+  //прослушиватель событий
+  console.log("Клик");
+  document
+    .querySelector(".navbar-bottom")
+    .classList.toggle("navbar-bottom_visible");
+});
