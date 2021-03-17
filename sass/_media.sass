@@ -199,10 +199,11 @@
       left: 0
       right: 0
       bottom: 0
-      top: 72px
+      top: 71px
       padding-top: 9px
       &_visible
         display: block
+        overflow: auto
     &-menu
       &__list
         flex-direction: column
@@ -346,7 +347,6 @@
     &__input
       flex-basis: 100%
 
-
 @media (max-width: 576px)
   .navbar
     &-menu
@@ -354,6 +354,10 @@
         &_w-96
           width: 96%
           margin-bottom: 38px
+  .search
+    &__input
+      &_w-96
+        width: 96%
   .logo
     width: 99px
   .hotel

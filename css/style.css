@@ -1917,11 +1917,12 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    top: 72px;
+    top: 71px;
     padding-top: 9px;
   }
   .navbar-bottom_visible {
     display: block;
+    overflow: auto;
   }
   .navbar-menu__list {
     -webkit-box-orient: vertical;
@@ -2127,6 +2128,9 @@ img {
   .navbar-menu__item_w-96 {
     width: 96%;
     margin-bottom: 38px;
+  }
+  .search__input_w-96 {
+    width: 96%;
   }
   .logo {
     width: 99px;
