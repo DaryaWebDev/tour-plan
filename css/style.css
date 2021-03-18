@@ -1397,6 +1397,7 @@ img {
 }
 
 .footer__logo {
+  margin-top: 28px;
   width: 154px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1501,7 +1502,7 @@ img {
 }
 
 .footer__title_mb-25 {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .footer__ul {
@@ -1529,6 +1530,14 @@ img {
   margin-bottom: 20px;
 }
 
+.footer__item_mb-25 {
+  margin-bottom: 12px;
+}
+
+.footer__item_mb-10 {
+  margin-bottom: 23px;
+}
+
 .footer__icon {
   margin-top: 5px;
   margin-left: 4px;
@@ -1536,11 +1545,13 @@ img {
 
 .footer__icon-wrapper {
   min-width: 40px;
+  margin-right: 2px;
 }
 
 .footer__text {
   color: #BDBDBD;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
+  margin-left: 2px;
 }
 
 .footer__link {
@@ -1829,7 +1840,8 @@ img {
         flex-basis: 47%;
   }
   .footer__logo {
-    width: 98px;
+    margin-top: -1px;
+    width: 96px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
