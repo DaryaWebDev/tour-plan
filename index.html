@@ -569,13 +569,14 @@
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
 
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form id="form-email" action="send.php" method="POST" class="subscribe newsletter__subscribe">
           <input
             type="text"
             placeholder="Your email address"
             class="subscribe__input"
+            name="email" required
           />
-          <button class="subscribe__button">Send</button>
+          <button class="subscribe__button" type="submit" name="subs">Send</button>
         </form>
       </div>
       <!-- /.newsletter-wrapper -->
@@ -882,11 +883,11 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-33">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-              <textarea class="footer__message" placeholder="Message" name="message"></textarea>
-              <button class="button footer__button" type="submit">Send</button>
+            <form id="form-message" action="send.php" method="POST" class="footer__form">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" required name="name">
+              <input type="text" class="input footer__input" placeholder="Phone Number*" required name="phone">
+              <textarea class="footer__message" placeholder="Message" required name="message"></textarea>
+              <button class="button footer__button" type="submit" name="mess">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
