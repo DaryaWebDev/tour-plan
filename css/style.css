@@ -2396,6 +2396,9 @@ img {
   .footer__disclaim, .footer__condit {
     margin-right: 9px;
   }
+  .footer__item_mb-25 {
+    margin-bottom: 23px;
+  }
 }
 
 @media (max-width: 320px) {
