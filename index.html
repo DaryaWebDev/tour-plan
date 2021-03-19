@@ -19,7 +19,7 @@
     <header class="navbar navbar_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo" target = "_blank" rel="nofollow noopener">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -38,7 +38,7 @@
             </button>
           </form>
 
-          <a href="#" class="user navbar__user navbar__user_mobile_hidden">
+          <a href="#" target = "_blank" rel="nofollow noopener" class="user navbar__user navbar__user_mobile_hidden">
             <img
               src="img/user-avatar.jpg"
               alt="Avatar: Nathan"
@@ -249,7 +249,7 @@
                 </a>
               </div>
               <!-- .booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
             <div id="map"></div>
@@ -350,7 +350,7 @@
                   <span class="packages-item__sale">$ 10,500</span>
                   <span class="packages-item__pricetag">$ 8,500</span>
                 </div>
-                <button
+                <button data-toggle="modal"
                   class="packages-item__button packages-item__button_first"
                 >
                   Book Now
@@ -403,7 +403,7 @@
                   <span class="packages-item__sale">$ 8,500</span>
                   <span class="packages-item__pricetag">$ 3,000</span>
                 </div>
-                <button class="packages-item__button">Book Now</button>
+                <button data-toggle="modal" class="packages-item__button">Book Now</button>
               </div>
             </div>
           </div>
@@ -452,7 +452,7 @@
                   <span class="packages-item__sale">$ 10,500</span>
                   <span class="packages-item__pricetag">$ 9,500</span>
                 </div>
-                <button class="packages-item__button">Book Now</button>
+                <button data-toggle="modal" class="packages-item__button">Book Now</button>
               </div>
             </div>
           </div>
@@ -501,7 +501,7 @@
                   <span class="packages-item__sale">$ 4,500</span>
                   <span class="packages-item__pricetag">$ 2,500</span>
                 </div>
-                <button class="packages-item__button">Book Now</button>
+                <button data-toggle="modal" class="packages-item__button">Book Now</button>
               </div>
             </div>
           </div>
@@ -550,7 +550,7 @@
                   <span class="packages-item__sale">$ 6,500</span>
                   <span class="packages-item__pricetag">$ 3,500</span>
                 </div>
-                <button class="packages-item__button">Book Now</button>
+                <button data-toggle="modal" class="packages-item__button">Book Now</button>
               </div>
             </div>
           </div>
@@ -773,7 +773,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -782,7 +782,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -791,7 +791,7 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -800,7 +800,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- .card -->
         </div>
@@ -888,7 +888,7 @@
             <form action="send.php" method="POST" class="footer__form">
               <input type="text" class="input footer__input" placeholder="Your Full Name*" required name="name">
               <input type="text" class="input footer__input" placeholder="Phone Number*" required name="phone">
-              <textarea class="footer__message" placeholder="Message" required name="message"></textarea>
+              <textarea class="message footer__message" placeholder="Message" required name="message"></textarea>
               <button class="button footer__button" type="submit" name="mess">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
@@ -904,7 +904,29 @@
       </div>
     </div>
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="icon: close">
+        </a>
+        <h3 class="modal__title modal__title_mb-33">Booking</h3>
+            <form action="send.php" method="POST" class="modal__form">
+              <input type="text" class="input modal__input" placeholder="Your Full Name*" required name="name">
+              <input type="text" class="input modal__input" placeholder="Phone Number*" required name="phone">
+              <input type="text" class="input modal__input" placeholder="Email*" required name="email">
+              <textarea class="message modal__message" placeholder="Message" required name="message"></textarea>
+              <button class="button modal__button" type="submit" name="mess">Send</button>
+              <span class="modal__info">* Required Fields</span>
+            </form>
 
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
