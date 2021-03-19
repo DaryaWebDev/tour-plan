@@ -1674,7 +1674,7 @@ img {
 
 .modal__dialog {
   position: fixed;
-  top: 50%;
+  top: 46.5%;
   left: 50%;
   padding: 33px 88px;
   background-color: #0A223D;
@@ -2004,6 +2004,9 @@ img {
     margin-left: 0;
     margin-right: 0;
   }
+  .modal__dialog {
+    padding: 25px 45px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2252,6 +2255,10 @@ img {
   }
   .footer__additional {
     margin-left: 0;
+  }
+  .modal__dialog--visible {
+    min-width: 70%;
+    overflow: auto;
   }
 }
 
@@ -2509,6 +2516,19 @@ img {
   }
   .footer__item_mb-25 {
     margin-bottom: 23px;
+  }
+  .modal-wrapper {
+    height: 480px;
+  }
+  .modal__dialog {
+    height: 480px;
+  }
+  .modal__dialog--visible {
+    min-width: 90%;
+  }
+  .modal__info {
+    margin-left: 5px;
+    margin-top: 15px;
   }
 }
 
