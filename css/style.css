@@ -835,6 +835,7 @@ img {
 }
 
 .booking__button {
+  padding: 0;
   width: 100%;
   min-height: 45px;
   border-radius: 4px;

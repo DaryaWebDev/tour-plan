@@ -887,7 +887,7 @@
             <h3 class="footer__title footer__title_mb-33">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form">
               <input type="text" class="input footer__input" placeholder="Your Full Name*" required name="name">
-              <input type="text" class="input footer__input" placeholder="Phone Number*" required name="phone">
+              <input type="number" class="input footer__input" placeholder="Phone Number*" required name="phone">
               <textarea class="message footer__message" placeholder="Message" required name="message"></textarea>
               <button class="button footer__button" type="submit" name="mess">Send</button>
               <span class="footer__info">* Required Fields</span>
@@ -904,6 +904,7 @@
       </div>
     </div>
     </footer>
+
     <div class="modal">
       <div class="modal__overlay"></div>
       <!-- /.modal__overlay -->
@@ -912,12 +913,12 @@
           <img src="img/close.svg" alt="icon: close">
         </a>
         <h3 class="modal__title modal__title_mb-33">Booking</h3>
-            <form action="send.php" method="POST" class="modal__form">
+            <form action="send.php" method="POST" class="modal__form" id="modal__id">
               <input type="text" class="input modal__input" placeholder="Your Full Name*" required name="name">
-              <input type="text" class="input modal__input" placeholder="Phone Number*" required name="phone">
+              <input type="number" class="input modal__input" placeholder="Phone Number*" required name="phone">
               <input type="text" class="input modal__input" placeholder="Email*" required name="email">
               <textarea class="message modal__message" placeholder="Message" required name="message"></textarea>
-              <button class="button modal__button" type="submit" name="mess">Send</button>
+              <button class="button modal__button" type="submit" name="messa">Send</button>
               <span class="modal__info">* Required Fields</span>
             </form>
 
