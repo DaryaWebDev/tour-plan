@@ -1684,10 +1684,13 @@ img {
   border-radius: 8px;
   z-index: 101;
   max-width: 478px;
+  max-height: 510px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  overflow: scroll;
+  display: block;
 }
 
 .modal__dialog--visible {
@@ -2256,9 +2259,11 @@ img {
   .footer__additional {
     margin-left: 0;
   }
+  .modal__dialog {
+    overflow: auto;
+  }
   .modal__dialog--visible {
     min-width: 70%;
-    overflow: auto;
   }
 }
 
@@ -2517,14 +2522,12 @@ img {
   .footer__item_mb-25 {
     margin-bottom: 23px;
   }
-  .modal-wrapper {
-    height: 480px;
-  }
   .modal__dialog {
-    height: 480px;
+    min-height: 490px;
   }
   .modal__dialog--visible {
     min-width: 90%;
+    overflow: auto;
   }
   .modal__info {
     margin-left: 5px;

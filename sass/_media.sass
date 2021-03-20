@@ -367,9 +367,9 @@
       margin-left: 0
   .modal
     &__dialog
+      overflow: auto
       &--visible
-        min-width: 70%
-        overflow: auto
+        min-width: 70%        
 
 @media (max-width: 576px)
   .navbar
@@ -546,12 +546,11 @@
       &_mb-25
         margin-bottom: 23px
   .modal
-    &-wrapper
-      height: 480px
     &__dialog
-      height: 480px
+      min-height: 490px      
       &--visible
-        min-width: 90%        
+        min-width: 90%
+        overflow: auto        
     &__info
       margin-left: 5px
       margin-top: 15px

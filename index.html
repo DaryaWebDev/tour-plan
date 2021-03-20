@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body id="body">
     <header class="navbar navbar_fixed">
       <div class="container">
         <div class="navbar-top">
@@ -906,10 +906,10 @@
     </footer>
 
     <div class="modal">
-      <div class="modal__overlay"></div>
-      <!-- /.modal__overlay -->
-      <div class="modal__dialog">
-        <div class="modal-wrapper">
+      <div class="modal__overlay"></div>   <!-- фон под модальным окном -->
+      <!-- /.modal__overlay --> 
+      <div class="modal__dialog" > <!-- контент модального окна       -->  
+        <div class="modal__wrapper">        
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon: close">
         </a>
@@ -922,9 +922,8 @@
               <button class="button modal__button" type="submit" name="messa">Send</button>
               <span class="modal__info">* Required Fields</span>
             </form>
-          </div>
-
-      </div>
+          </div>  
+        </div>      
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->

@@ -1,4 +1,4 @@
-.modal   
+.modal
   &__overlay
     position: fixed
     left: 0
@@ -12,7 +12,7 @@
     transition: opacity 0.2s
     &--visible
       visibility: visible
-      opacity: 1
+      opacity: 1      
   &__dialog
     position: fixed
     top: 46.5%
@@ -24,9 +24,12 @@
     border-radius: 8px
     z-index: 101
     max-width: 478px
+    max-height: 510px
     visibility: hidden
     opacity: 0
     transition: opacity 0.2s
+    overflow: scroll
+    display: block
     &--visible
       visibility: visible
       opacity: 1
