@@ -22,7 +22,7 @@ if(isset($_POST["subs"])){
         
         $mail->Host       = 'daryadev.ru'; // SMTP сервера вашей почты
         $mail->Username   = 'besttourplan@daryadev.ru'; // Логин на почте
-        $mail->Password   = 'I5r5L6b1'; // Пароль на почте
+        $mail->Password   = 'B7u0S3m9'; // Пароль на почте
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
         $mail->setFrom('besttourplan@daryadev.ru', 'Darya Selivanova'); // Адрес самой почты и имя отправителя
@@ -76,7 +76,7 @@ if(isset($_POST["mess"])){
         
         $mail->Host       = 'daryadev.ru'; // SMTP сервера вашей почты
         $mail->Username   = 'besttourplan@daryadev.ru'; // Логин на почте
-        $mail->Password   = 'I5r5L6b1'; // Пароль на почте
+        $mail->Password   = 'B7u0S3m9'; // Пароль на почте
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
         $mail->setFrom('besttourplan@daryadev.ru', 'Darya Selivanova'); // Адрес самой почты и имя отправителя
@@ -130,7 +130,7 @@ if(isset($_POST["messa"])){
         
         $mail->Host       = 'daryadev.ru'; // SMTP сервера вашей почты
         $mail->Username   = 'besttourplan@daryadev.ru'; // Логин на почте
-        $mail->Password   = 'I5r5L6b1'; // Пароль на почте
+        $mail->Password   = 'B7u0S3m9'; // Пароль на почте
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
         $mail->setFrom('besttourplan@daryadev.ru', 'Darya Selivanova'); // Адрес самой почты и имя отправителя
