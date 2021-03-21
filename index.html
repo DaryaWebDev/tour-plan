@@ -871,15 +871,19 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/contact-phone-call.svg" alt="icon: phone">
                 </div>
-                Tel (business hours) : 269 1500 <br>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__wrapper">
+                <p>Tel (business hours) : <a class="footer__links" href="tel:2691500">269 1500</a></p> 
+                <p>Tel (hotline) Monday - Saturday: <a class="footer__links" href="tel:52566138">52-56-61-38</a> (08:00 am – 20:00 pm)</p>
+                <p>Tel (hotline) Sunday: <a class="footer__links" href="tel:52566138">52-56-61-38</a> (08:00 am – 14:00 pm)</p>
+              </div>
               </li>
               <li class="footer__item footer__item_mb_2">
                <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/email.svg" alt="icon: email">
                </div>
+               <a class="footer__links" href="mailto:cherly.lawson@example.com">
                 cherly.lawson@example.com
+              </a>
               </li>
             </ul>
           </div>
@@ -908,13 +912,15 @@
     <div class="modal">
       <div class="modal__overlay"></div>   <!-- фон под модальным окном -->
       <!-- /.modal__overlay --> 
+      <div class="modal__wrapper">   
       <div class="modal__dialog" > <!-- контент модального окна       -->  
-        <div class="modal__wrapper">        
+             
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon: close">
         </a>
-        <h3 class="modal__title modal__title_mb-33">Booking</h3>
+        
             <form action="send.php" method="POST" class="modal__form" id="modal__id">
+              <h3 class="modal__title modal__title_mb-33">Booking</h3>
               <input type="text" class="input modal__input" placeholder="Your Full Name*" required name="name">
               <input type="number" class="input modal__input" placeholder="Phone Number*" required name="phone">
               <input type="text" class="input modal__input" placeholder="Email*" required name="email">
@@ -922,8 +928,8 @@
               <button class="button modal__button" type="submit" name="messa">Send</button>
               <span class="modal__info">* Required Fields</span>
             </form>
-          </div>  
-        </div>      
+        </div>  
+       </div>   
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->

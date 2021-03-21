@@ -1653,6 +1653,15 @@ img {
   height: 22px;
 }
 
+.footer__links {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modal__title {
+  width: 100%;
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -1684,13 +1693,13 @@ img {
   border-radius: 8px;
   z-index: 101;
   max-width: 478px;
-  max-height: 510px;
+  max-height: 100vh;
+  overflow: auto;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  overflow: scroll;
-  display: block;
+  overflow: auto;
 }
 
 .modal__dialog--visible {
@@ -2522,12 +2531,8 @@ img {
   .footer__item_mb-25 {
     margin-bottom: 23px;
   }
-  .modal__dialog {
-    min-height: 490px;
-  }
   .modal__dialog--visible {
     min-width: 90%;
-    overflow: auto;
   }
   .modal__info {
     margin-left: 5px;
