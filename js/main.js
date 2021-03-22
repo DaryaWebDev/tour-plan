@@ -189,8 +189,8 @@ $(document).ready(function () {
     });
   
   $(document).ready(function () {
-    $("input[type='phone']").mask('+7 (999) 999-9999');
-    $("input[type='phone']").mask('+7(999) 999-9999?');
+    $("input[type='tel']").mask('+7 (999) 999-9999');
+    $("input[type='tel']").mask('+7(999) 999-9999?');
   });
   
 
