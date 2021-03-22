@@ -27,11 +27,17 @@
             />
           </a>
 
-          <form action="index.html" class="search navbar__search navbar__search_mobile_hidden">
+          <form
+            action="#"
+            class="search navbar__search navbar__search_mobile_hidden"
+          >
             <input
               type="text"
               placeholder="Search Location"
               class="search__input"
+              id="search__input"
+              name="search"
+              required
             />
             <button class="search__button">
               <img src="img/search.svg" alt="Icon: search" />
@@ -72,16 +78,22 @@
           </a>
               </li>
               <li class="navbar-menu__item navbar-menu__item_mobile_visible navbar-menu__item_w-96">
-                <form action="index.html" class="search navbar__search navbar__search_mobile_visible">
-            <input
-              type="text"
-              placeholder="Search Location"
-              class="search__input search__input_w-96"
-            />
-            <button class="search__button">
-              <img src="img/search.svg" alt="Icon: search" />
-            </button>
-          </form>
+                <form
+                  action="#"
+                  class="search navbar__search navbar__search_mobile_visible"
+                  id=""
+                >
+                  <input
+                    type="text"
+                    placeholder="Search Location"
+                    class="search__input search__input_w-96"
+                    name="search"
+                    required
+                  />
+                  <button class="search__button">
+                    <img src="img/search.svg" alt="Icon: search" />
+                  </button>
+                </form>
               </li>
 
               <li class="navbar-menu__item">
@@ -230,11 +242,34 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-33">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*" required name="name">
-              <input type="text" class="input footer__input" placeholder="Phone Number*" required name="phone">
-              <textarea class="message footer__message" placeholder="Message" required name="message"></textarea>
-              <button class="button footer__button" type="submit" name="mess">Send</button>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                type="text"
+                class="input footer__input"
+                placeholder="Your Full Name*"
+                name="name"
+                required
+                minlength="2"
+              />
+              </div>
+              <div class="footer__input-group">
+               <input
+                type="phone"
+                class="input footer__input"
+                placeholder="Phone Number*"
+                name="phone"
+                required
+              /> 
+              </div>                
+              <textarea
+                class="message footer__message"
+                placeholder="Message"
+                name="message"
+              ></textarea>
+              <button class="button footer__button" type="submit" name="mess">
+                Send
+              </button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
@@ -250,10 +285,13 @@
     </div>
     </footer>
 
+
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
-    <script src="js/parallax.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
