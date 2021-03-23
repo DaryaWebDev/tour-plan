@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f26e2619-7999-4e0a-8c09-90208062f8da&lang=ru_RU"></script>
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -141,7 +142,7 @@
     <section class="hotel">
       <div class="container">
         <div class="hotel-info hotel__hotel-info">
-          <div class="hotel-info__text">
+          <div class="hotel-info__text" data-aos="zoom-in">
             <div class="hotel-wrapper">
               <!-- .stars -->
               <h1 class="hotel-name hotel-info__name">Message sent!</h1>
@@ -154,7 +155,7 @@
           </div>
            
         </div>
-        <form action="index.html" target="_blank">
+        <form action="index.html">
         <button class="button hotel__button">Back</button>
         </form>
         <!-- .hotel__hotel-info -->
@@ -251,15 +252,18 @@
                 name="name"
                 required
                 minlength="2"
+                maxlength="25"
               />
               </div>
               <div class="footer__input-group">
                <input
                 type="tel"
                 class="input footer__input"
-                placeholder="Phone Number*"
+                placeholder="+7 (___) ___ __ __*"
                 name="phone"
                 required
+                minlength="18"
+                maxlength="18"
               /> 
               </div>                
               <textarea
@@ -292,6 +296,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script> 
     <script src="js/main.js"></script>
   </body>
 </html>

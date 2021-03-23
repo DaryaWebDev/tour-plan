@@ -149,16 +149,19 @@ $(document).ready(function () {
       messages: {
         name: {
           required: "Please specify your name",
-          minlength: "Name must be at least 2 letters long",
+          minlength: "Name consists of at least 2 letters",
+          maxlength: "Maximum length 25 letters",
         },
         email: {
           required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com",
+          email: "Email address must be in the format of name@domain.com",
+          minlength: "Minimum value 4 characters",
         },
         phone: {
           required: "You need to specify phone",
+          minlength: "Phone at least 10 digits",
         },
-        // 
+        //
       },
     });
   })
@@ -181,8 +184,9 @@ $(document).ready(function () {
         messages: {
           email: {
             required: "Enter your email",
+            minlength: "Minimum value 4 characters",
             email:
-              "Your email address must be in the format of name@domain.com",
+              "Email address must be in the format of name@domain.com",
           },
         },
       });
@@ -193,6 +197,9 @@ $(document).ready(function () {
   });
   
   AOS.init();
+
+
+  document.body.classList.add("article");
 
 });
 

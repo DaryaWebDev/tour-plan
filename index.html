@@ -655,6 +655,7 @@
             class="subscribe__input"
             name="email"
             required
+            minlength="4"
           />
           <button class="subscribe__button" type="submit" name="subs">
             Send
@@ -890,6 +891,7 @@
       </div>
     </section>
     <!-- /.activities -->
+    
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -1148,6 +1150,8 @@
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-33">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
+
+              <div class="footer__form-wrapper">      
               <div class="footer__input-group">
                 <input
                 type="text"
@@ -1155,6 +1159,7 @@
                 placeholder="Your Full Name*"
                 name="name"
                 required
+                maxlength="25"
                 minlength="2"
               />
               </div>
@@ -1166,10 +1171,11 @@
                 placeholder="+7 (___) ___ __ __*"
                 name="phone"
                 required
+                minlength="18"
+                maxlength="18"
               /> 
-              </div>
-
-              
+              </div>  
+            </div>           
               
               <textarea
                 class="message footer__message"
@@ -1233,20 +1239,24 @@
               required
               name="name"
               minlength="2"
+              maxlength="25"
             />
             <input
               type="tel"
               class="input modal__input"
-              placeholder="+7 (___) ___ __ __"
+              placeholder="+7 (___) ___ __ __*"
               required
               name="phone"
+              minlength="18"
+              maxlength="18"
             />
             <input
               type="email"
               class="input modal__input"
               placeholder="Email*"
-              required
               name="email"
+              required              
+              minlength="4"
             />
             <textarea
               class="message modal__message"

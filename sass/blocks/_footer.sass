@@ -52,7 +52,13 @@
     display: flex
     align-items: center
     justify-content: space-between
-    flex-wrap: wrap    
+    flex-wrap: wrap  
+    &-wrapper
+      display: flex
+      width: 100%
+      flex-wrap: wrap
+      justify-content: space-between
+
   &__title
     font-weight: bold
     font-size: 18px
@@ -100,7 +106,7 @@
     color: inherit
   &__input
     width: 100%
-    &-group      
+    &-group    
       margin-bottom: 15px
       flex-basis: 47%
   &__message
