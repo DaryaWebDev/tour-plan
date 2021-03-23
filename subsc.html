@@ -243,9 +243,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer__contact-form">
+<div class="footer__contact-form">
             <h3 class="footer__title footer__title_mb-33">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
+
+              <div class="footer__form-wrapper">      
               <div class="footer__input-group">
                 <input
                 type="text"
@@ -253,8 +255,8 @@
                 placeholder="Your Full Name*"
                 name="name"
                 required
-                minlength="2"
                 maxlength="25"
+                minlength="2"
               />
               </div>
 
@@ -268,9 +270,8 @@
                 minlength="18"
                 maxlength="18"
               /> 
-              </div>
-
-              
+              </div>  
+            </div>           
               
               <textarea
                 class="message footer__message"
