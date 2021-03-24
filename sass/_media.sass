@@ -1,4 +1,4 @@
-@media (min-width: 992px)
+@media (min-width: 993px)
   .packages
     &-item
       &__button
@@ -24,6 +24,29 @@
       &:hover
         background-color: #ec1f44cb    
         transition: 0.7s all
+
+  .navbar
+    &-menu
+      &__link
+        position: relative
+        &::after
+          display: block
+          position: absolute
+          left: 0
+          top: 20px
+          width: 0
+          height: 1px
+          background-color: #fff
+          content: " "
+          transition: width 0.3s ease-out
+        &:focus
+          &:after
+            width: 100%
+        &:hover
+          &:after
+            width: 100%
+            
+
 
 
 
