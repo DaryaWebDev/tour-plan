@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f26e2619-7999-4e0a-8c09-90208062f8da&lang=ru_RU"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=f26e2619-7999-4e0a-8c09-90208062f8da&lang=ru_RU"></script> -->
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -52,7 +52,7 @@
             class="user navbar__user navbar__user_mobile_hidden"
           >
             <img
-              src="img/user-avatar.jpg"
+              src="img/user-avatar.webp"
               alt="Avatar: Nathan"
               class="user__avatar"
             />
@@ -79,7 +79,7 @@
                   class="user navbar__user navbar__user_mobile_visible"
                 >
                   <img
-                    src="img/user-avatar.jpg"
+                    src="img/user-avatar.webp"
                     alt="Avatar: Nathan"
                     class="user__avatar"
                   />
@@ -233,35 +233,35 @@
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-1.jpg"
+                  src="img/slide-1.webp"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-2.jpg"
+                  src="img/slide-2.webp"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-3.jpg"
+                  src="img/slide-3.webp"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-4.jpg"
+                  src="img/slide-4.webp"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-5.jpg"
+                  src="img/slide-5.webp"
                   alt="slide"
                 />
               </div>
@@ -318,7 +318,10 @@
               </button>
             </div>
             <!-- /.booking -->
-            <div id="map"></div>
+            <div class="ymap-container">
+              <div class="loader loader-default"></div>
+              <div id="map-yandex"></div>
+            </div>
             <!-- /.map -->
           </div>
         </div>
@@ -335,7 +338,7 @@
           <div class="packages-item__card packages-item__card_first" data-aos="fade-down" data-aos-delay="100">
             <div class="packages-item__photo packages-item__photo_first">
               <img
-                src="img/packages-1.jpg"
+                src="img/packages-1.webp"
                 alt="Photo: Hotel Blue Haven"
                 class="packages-item__img packages-item__img_first"
               />
@@ -429,7 +432,7 @@
             <div class="packages-item__wrapper">
               <div class="packages-item__photo">
                 <img
-                  src="img/packages-2.jpg"
+                  src="img/packages-2.webp"
                   alt="Photo: Hotel Blue Haven"
                   class="packages-item__img"
                 />
@@ -480,7 +483,7 @@
             <div class="packages-item__wrapper">
               <div class="packages-item__photo">
                 <img
-                  src="img/packages-3.jpg"
+                  src="img/packages-3.webp"
                   alt="Photo: White Palace"
                   class="packages-item__img"
                 />
@@ -531,7 +534,7 @@
             <div class="packages-item__wrapper">
               <div class="packages-item__photo">
                 <img
-                  src="img/packages-4.jpg"
+                  src="img/packages-4.webp"
                   alt="Photo: Luxury Place"
                   class="packages-item__img"
                 />
@@ -582,7 +585,7 @@
             <div class="packages-item__wrapper">
               <div class="packages-item__photo">
                 <img
-                  src="img/packages-5.jpg"
+                  src="img/packages-5.webp"
                   alt="Photo: Hotel Five Star"
                   class="packages-item__img"
                 />
@@ -635,7 +638,7 @@
     <section
       class="newsletter parallax-window"
       data-parallax="scroll"
-      data-image-src="img/newsletter-bg.jpg"
+      data-image-src="img/newsletter-bg.webp"
     >
       <div class="newsletter-wrapper">
         <h2 class="newsletter-title newsletter__title">
@@ -674,7 +677,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar.jpg"
+                    src="img/reviews-avatar.webp"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
                   />
@@ -728,7 +731,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-1.jpg"
+                    src="img/reviews-avatar-1.webp"
                     alt="Photo: Dorothy Strickland"
                     class="reviews-slider__avatar"
                   />
@@ -782,7 +785,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-2.jpg"
+                    src="img/reviews-avatar-2.webp"
                     alt="Photo: Clifton Long"
                     class="reviews-slider__avatar"
                   />
@@ -851,7 +854,7 @@
         <div class="activities-wrapper">
           <div class="card activities__card" data-aos="fade-up" data-aos-delay="100">
             <img
-              src="img/activity-1.jpg"
+              src="img/activity-1.webp"
               alt="The curious corner of chamarel"
               class="card__image"
             />
@@ -860,7 +863,7 @@
           </div>
           <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
             <img
-              src="img/activity-2.jpg"
+              src="img/activity-2.webp"
               alt="Gymkhana club golf course"
               class="card__image"
             />
@@ -869,7 +872,7 @@
           </div>
           <div class="card activities__card" data-aos="fade-up" data-aos-delay="500">
             <img
-              src="img/activity-3.jpg"
+              src="img/activity-3.webp"
               alt="Tamarind falls hiking trip - full day"
               class="card__image"
             />
@@ -878,7 +881,7 @@
           </div>
           <div class="card activities__card" data-aos="fade-up" data-aos-delay="700">
             <img
-              src="img/activity-4.jpg"
+              src="img/activity-4.webp"
               alt="The blue marine discovery quest"
               class="card__image"
             />
@@ -1213,7 +1216,7 @@
           >
         </div>
         <div class="footer__pay">
-          <img src="img/pay.png" alt="" class="footer__image" />
+          <img src="img/pay.webp" alt="" class="footer__image" />
         </div>
       </div>
     </footer>
@@ -1276,9 +1279,7 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
-    <script src="js/parallax.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>  
     <script src="js/aos.js"></script>  

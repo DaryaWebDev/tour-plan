@@ -1,9 +1,7 @@
 $(document).ready(function () {
   const hotelSlider = new Swiper(".hotel-slider", {
-    // Optional parameters
     loop: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: ".hotel-slider__button--next",
       prevEl: ".hotel-slider__button--prev",
@@ -15,69 +13,119 @@ $(document).ready(function () {
   });
 
   const reviewsSlider = new Swiper(".reviews-slider", {
-    // Optional parameters
     loop: true,
 
-    // Navigation arrows
     navigation: {
       nextEl: ".reviews-slider__button--next",
       prevEl: ".reviews-slider__button--prev",
     },
-    // keyboard: {
-    //   enabled: true,
-    //   onlyInViewport: false,
-    // },
   });
+  
+var spinner = $(".ymap-container").children(".loader");
+var check_if_load = false;
+var myMapTemp, myPlacemarkTemp;
+function init() {
+  var myMapTemp = new ymaps.Map("map-yandex", {
+    center: [7.838124988912487, 98.2988759307281], 
+    zoom: 15, 
+    controls: ["zoomControl", "fullscreenControl"], 
+  });
+  var myPlacemarkTemp = new ymaps.Placemark(
+    [7.838124988912487, 98.2988759307281],
+    {
+      balloonContent: "This is your hotel",
+    },
 
-  ymaps.ready(init);
-  function init() {
-    // Создание карты.
-    var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [7.838124988912487, 98.2988759307281],
-
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 15,
-      }),
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-      myPlacemark = new ymaps.Placemark(
-        myMap.getCenter(),
-        {
-          hintContent: "Собственный значок метки",
-          balloonContent: "This is your hotel",
-        },
-        {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: "default#image",
-          // Своё изображение иконки метки.
-          iconImageHref: "../img/map-icon.jpg",
-          // Размеры метки.
-          iconImageSize: [40, 40],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-23, -28],
+  );
+  myMapTemp.geoObjects.add(myPlacemarkTemp);
+  var layer = myMapTemp.layers.get(0).get(0);
+  waitForTilesLoad(layer).then(function () {
+    spinner.removeClass("is-active");
+  });
+  }
+  
+  function waitForTilesLoad(layer) {
+    return new ymaps.vow.Promise(function (resolve, reject) {
+      var tc = getTileContainer(layer),
+        readyAll = true;
+      tc.tiles.each(function (tile, number) {
+        if (!tile.isReady()) {
+          readyAll = false;
         }
-      );
-    myMap.geoObjects.add(myPlacemark);
+      });
+      if (readyAll) {
+        resolve();
+      } else {
+        tc.events.once("ready", function () {
+          resolve();
+        });
+      }
+    });
   }
 
+  function getTileContainer(layer) {
+    for (var k in layer) {
+      if (layer.hasOwnProperty(k)) {
+        if (
+          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer ||
+          layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+        ) {
+          return layer[k];
+        }
+      }
+    }
+    return null;
+  }
+
+  function loadScript(url, callback) {
+    var script = document.createElement("script");
+
+    if (script.readyState) {
+      // IE
+      script.onreadystatechange = function () {
+        if (script.readyState == "loaded" || script.readyState == "complete") {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      // Другие браузеры
+      script.onload = function () {
+        callback();
+      };
+    }
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+  var ymap = function () {
+    $(".ymap-container").mouseenter(function () {
+      if (!check_if_load) {
+        // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+        // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+        check_if_load = true;
+        // Показываем индикатор загрузки до тех пор, пока карта не загрузится
+        spinner.addClass("is-active");
+        // Загружаем API Яндекс.Карт
+        loadScript(
+          "https://api-maps.yandex.ru/2.1/?apikey=f26e2619-7999-4e0a-8c09-90208062f8da&lang=ru_RU",
+          function () {
+            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+            ymaps.load(init);
+          }
+        );
+      }
+    });
+  };
+  $(function () {
+    //Запускаем основную функцию
+    ymap();
+  });
   var menuButton = document.querySelector(".menu-button"); //ищем этот класс
   menuButton.addEventListener("click", function () {
-    //прослушиватель событий
     document
       .querySelector(".navbar-bottom")
       .classList.toggle("navbar-bottom_visible");
   });
-
-
 
   var modalButton = $("[data-toggle=modal]"); //переменная - кнопка, с нее выходит модальное окно
   var closeModalButton = $(".modal__close"); //привязка перем к "крестику"
@@ -85,21 +133,18 @@ $(document).ready(function () {
   closeModalButton.on("click", closeModal); //при клике на "крестик" выполнение ф-и closeModal
 
   //добавляем класс visible
-  function openModal() { //открыть окно - применить класс visible к нашему фону и форме
+  function openModal() {
+    //открыть окно - применить класс visible к нашему фону и форме
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
-     document.body.style.overflow = "hidden";
-    // let scrollX = window.scrollX;
-    // let scrollY = window.scrollY;
-    // window.onscroll = function () {
-    //   window.scrollTo(scrollX, scrollY);
-    // };
+    document.body.style.overflow = "hidden";
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
   }
 
   //удаляем класс visible
-  function closeModal(event) { //закрыть окно - удалить класс visible
+  function closeModal(event) {
+    //закрыть окно - удалить класс visible
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");
@@ -117,10 +162,14 @@ $(document).ready(function () {
     modalDialog.removeClass("modal__dialog--visible");
   });
 
-  $(document).mouseup(function (e) { // событие клика по веб-документу
-    var div = $('.modal__dialog'); // тут указываем класс элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
-      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+  $(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var div = $(".modal__dialog"); // тут указываем класс элемента
+    if (
+      !div.is(e.target) && // если клик был не по нашему блоку
+      div.has(e.target).length === 0
+    ) {
+      // и не по его дочерним элементам
       document.body.style.overflow = "auto";
       var modalDialog = $(".modal__dialog");
       modalDialog.removeClass("modal__dialog--visible");
@@ -129,20 +178,7 @@ $(document).ready(function () {
     }
   });
 
-
-
-
-  // $(document) .mouseup(function (e) {
-  //   var container = $(".modal__dialog");
-  //   if (container.has(e.target).length === 0)
-  //     var modalDialog = $(".modal__dialog");
-  //   var modalOverlay = $(".modal__overlay");
-  //   modalDialog.removeClass("modal__dialog--visible");
-  //   modalOverlay.removeClass("modal__overlay--visible");
-  // });
-
-
-//Обработка форм
+  //Обработка форм
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
@@ -164,7 +200,7 @@ $(document).ready(function () {
         //
       },
     });
-  })
+  });
 
   $(".search").each(function () {
     $(this).validate({
@@ -175,31 +211,24 @@ $(document).ready(function () {
         },
       },
     });
-
-  })
-
-    $(".subscribe").each(function () {
-      $(this).validate({
-        errorClass: "invalid-subscribe",
-        messages: {
-          email: {
-            required: "Enter your email",
-            minlength: "Minimum value 4 characters",
-            email:
-              "Email address must be in the format of name@domain.com",
-          },
-        },
-      });
-    });
-  
-  $(document).ready(function () {
-    $("input[type='tel']").mask('+7 (999) 999-99-99');
   });
-  
+
+  $(".subscribe").each(function () {
+    $(this).validate({
+      errorClass: "invalid-subscribe",
+      messages: {
+        email: {
+          required: "Enter your email",
+          minlength: "Minimum value 4 characters",
+          email: "Email address must be in the format of name@domain.com",
+        },
+      },
+    });
+  });
+
+  $(document).ready(function () {
+    $("input[type='tel']").mask("+7 (999) 999-99-99");
+  });
+
   AOS.init();
-
-
-  document.body.classList.add("article");
-
 });
-
