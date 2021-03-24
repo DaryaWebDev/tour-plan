@@ -190,7 +190,7 @@ function init() {
         },
         email: {
           required: "We need your email address to contact you",
-          email: "Email address must be in the format of name@domain.com",
+          email: "Use this format: name@domain.com",
           minlength: "Minimum value 4 characters",
         },
         phone: {
@@ -220,7 +220,7 @@ function init() {
         email: {
           required: "Enter your email",
           minlength: "Minimum value 4 characters",
-          email: "Email address must be in the format of name@domain.com",
+          email: "Use this format: name@domain.com",
         },
       },
     });

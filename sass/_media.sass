@@ -1,3 +1,32 @@
+@media (min-width: 992px)
+  .packages
+    &-item
+      &__button
+        &:hover
+          background-color: #ec1f44cb
+          transition: 0.7s all
+  .subscribe
+    &__button
+      &:hover
+          background-color: #ec1f44cb
+          transition: 0.7s all
+  .card
+    &__button
+      &:hover
+          background-color: #ec1f44cb
+          transition: 0.7s all
+  .button
+    &:hover
+      background-color: #ec1f44cb    
+      transition: 0.7s all
+  .search
+    &__button
+      &:hover
+        background-color: #ec1f44cb    
+        transition: 0.7s all
+
+
+
 @media (max-width: 1200px)
   .container
     max-width: 960px     
@@ -36,7 +65,8 @@
       padding-top: 30px
       padding-bottom: 30px
     &__search
-      margin-right: 73px;
+      width: 340px
+      margin-right: 73px
       margin-left: auto
     &-menu
       &__list
@@ -79,6 +109,7 @@
   .ymap
     &-container
       width: 340px
+      height: 210px
   .newsletter
     padding: 92px 0 93px 0
   .reviews
@@ -126,6 +157,11 @@
           min-width: 350px
   .footer
     padding-top: 72px
+    &__text
+      margin-left: 0
+    &__ul
+      &_ml-9
+        margin-left: 3px
     &__title
       margin-top: 10px
       &_mb-25
@@ -395,6 +431,12 @@
     width: 99px
   .hotel
     padding-bottom: 40px
+    &-info
+      &__offer
+        margin-left: 1px
+      &__stars
+        margin-right: 15px
+        margin-top: 2px
     &__slider
       height: 179px
       margin-bottom: 20px
@@ -573,6 +615,5 @@
       &__price
         max-width: 55%
   .footer
-    &__contact
-      &-details
-         //width: 85%
+    &__ul
+      margin-left: -2px
