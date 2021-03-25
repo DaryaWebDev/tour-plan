@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
   const reviewsSlider = new Swiper(".reviews-slider", {
-    loop: true,
+    loop: true, autoHeight: true,
 
     navigation: {
       nextEl: ".reviews-slider__button--next",
@@ -120,11 +120,14 @@ function init() {
     //Запускаем основную функцию
     ymap();
   });
+
+
   var menuButton = document.querySelector(".menu-button"); //ищем этот класс
   menuButton.addEventListener("click", function () {
     document
       .querySelector(".navbar-bottom")
       .classList.toggle("navbar-bottom_visible");
+      body.classList.toggle("no-scroll");
   });
 
   var modalButton = $("[data-toggle=modal]"); //переменная - кнопка, с нее выходит модальное окно
@@ -197,7 +200,6 @@ function init() {
           required: "You need to specify phone",
           minlength: "Phone at least 10 digits",
         },
-        //
       },
     });
   });
