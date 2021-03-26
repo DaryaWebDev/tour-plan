@@ -24,7 +24,6 @@
       &:hover
         background-color: #ec1f44cb    
         transition: 0.7s all
-
   .navbar
     &-menu
       &__link
@@ -54,12 +53,7 @@
     &__links
       &:hover
         text-shadow: 0px 0px 10px rgba(255,255,255,0.7)
-        transition: 0.5s all
-
-            
-
-
-
+        transition: 0.5s all 
 
 @media (max-width: 1200px)
   .container
@@ -83,11 +77,32 @@
       &__button
         padding: 8px 20px 8px 20px
       &__price
-        max-width: 130px
+        max-width: 130px    
   .footer
     &__input
       &-group
         flex-basis: 47%
+    &-wrapper
+      grid-template-columns: repeat(10, 1fr)
+    &__logo
+      grid-column: 1 / 3
+    &__categories
+      grid-column: 3 / 6
+      margin-left: 50px
+    &__additional
+      grid-column: 6 / 9
+    &__social
+      &-network
+        grid-column: 6 / 10
+    &__legal
+      grid-column: 9 / 11
+      margin-left: -20px
+    &__contact
+      &-details
+        grid-column: 1 / 6
+      &-form
+        grid-column: 6 / 11
+
 @media (max-width: 992px)
   .container, 
   .newsletter-wrapper
@@ -190,63 +205,62 @@
         &_first
           min-width: 350px
   .footer
-    padding-top: 72px
-    &__text
-      margin-left: 0
-    &__ul
-      &_ml-9
-        margin-left: 3px
+    padding-top: 43px
     &__title
-      margin-top: 10px
       &_mb-25
-        margin-top: 12px
+        margin-left: 1px
       &_mb-33
-        margin-bottom: 35px
-      &_inline
-        margin-left: 5px
-    &__form
-      max-width: 539px
+        margin-top: 6px
     &-wrapper
-      grid-template-columns: repeat(6, 1fr)
-      grid-row-gap: 39px
-      grid-column-gap: 0px
+      grid-template-columns: repeat(12, 1fr)
+      grid-auto-rows: minmax(0px, min-content)
+      grid-row-gap: 50px
+      padding-bottom: 65px
+    &__form
+      width: 104%
     &__input
       &-group
         flex-basis: 47%
     &__logo
-      margin-top: -1px
       width: 96px
       grid-row: 1 / 2
-      grid-column: span 2
+      grid-column: 1 / 4
+      &-icon
+        width: 96px
     &__social
-      &-links
-        margin-top: 14px
-        margin-left: 2px
       &-network
-        margin-left: -52px
         grid-row: 1 / 2
-        grid-column: span 4
+        grid-column: 4 / 10
         align-self: center
+        margin-top: 39px
     &__categories
+      margin-top: -2px
+      margin-left: 0
       grid-row: 2 / 3
-      grid-column: span 2
-    &__legal
-      margin-left: 32px
-      grid-column: span 2
-    &__additional
-      margin-left: -32px
-      grid-column: span 2
+      grid-column: 1 / 4
     &__contact
       &-details
-        grid-column: span 5
-        grid-row: 3
-        margin-left: 0
-        margin-bottom: 7px
+        grid-column: 1 / 10
+        grid-row: 3 / 4
+        margin-left: -2px
+        padding-top: 12px
       &-form
-        grid-column: span 5
-        grid-row: 4
+        max-width: 540px
         margin-left: 0
-        margin-bottom: 63px
+        margin-top: 0
+        grid-column: 1 / 10
+        grid-row: 4 / 5
+    &__additional
+      grid-row: 2 / 3
+      grid-column: 4 / 9
+      justify-self: center
+      margin-top: -2px
+    &__legal
+      grid-row: 2 / 3
+      grid-column: 9 / 13
+      justify-self: center
+      margin-left: 6px
+      margin-top: -2px      
     &__about
       &-info
         margin-left: 2px
@@ -438,11 +452,58 @@
           font-size: 14px
           padding: 10px 22px 8px 12px
   .footer
+    padding-top: 69px
+    padding-bottom: 21px
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+      padding-bottom: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        flex-wrap: wrap
+        margin-left: 0
+    &__additional
+      justify-self: start
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      margin-bottom: 10px
+    &__legal
+      justify-self: start
+      grid-row: 3
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+        margin-bottom: 10px
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__title
+      &-details
+        margin-top: 0
+      &-form
+        margin-top: 0
+        margin-bottom: 15px
+      &_inline
+        flex-basis: 100%
+        margin-bottom: 20px
+    &__icon
+      &-wrapper
+        min-width: 31px
     &__input
       &-group
         flex-basis: 100%
-    &__additional
-      margin-left: 0
+
+
   .modal
     &__dialog
       overflow: auto
@@ -547,73 +608,34 @@
       &__photo
         max-width: 100%
   .footer
-    padding-top: 69px
+    padding-top: 39px
+    &__form
+      width: 100%
     &-wrapper
       margin-bottom: -2px
+      grid-row-gap: 0px
+    &__title
+      &_mb-33
+        margin-bottom: 15px
+      &_inline
+        margin-bottom: 22px      
     &__logo
       width: 96px
+    &__social
+      &-links
+        margin-bottom: 30px
+    &__legal
+      margin-bottom: 32px
+    &__additional
+      margin-bottom: 32px
+    &__categories
+      margin-bottom: 29px
+    &__contact
+      &-details
+        margin-bottom: 51px
     &__ul
       &_ml-9
       margin-left: 0
-    &-wrapper
-      grid-template-columns: 1fr
-      grid-row-gap: 30px
-      grid-template-areas: "logo" "social" "legal" "additional" "categories" "contact-details" "contact-form"
-    &__title
-      &_mb-25
-        margin-top: 10px
-      &_mb-33
-        margin-bottom: 14px
-      &_inline
-        margin-bottom: 21px
-    &__logo
-      grid-row: 1
-      grid-column: 1
-      grid-area: logo
-    &__social
-      &-network
-        grid-row: 2
-        grid-column: 1
-        margin-left: -4px
-        display: flex
-        align-items: flex-start
-        flex-wrap: wrap
-        grid-area: social
-      &-links
-        margin-top: 1px
-        margin-left: 7px
-    &__additional
-      margin-top: -10px
-      margin-left: 0
-      grid-row: 3
-      grid-column: 1
-      grid-area: additional
-    &__categories
-      margin-left: 0
-      margin-top: -13px
-      grid-row: 4
-      grid-column: 1
-      grid-area: categories
-    &__legal
-      margin-top: -12px
-      grid-row: 5
-      grid-column: 1
-      margin-left: 0
-      grid-area: legal
-    &__contact
-      &-details
-        margin-top: -9px
-        max-width: 280px
-        grid-row: 6
-        grid-column: 1
-        grid-area: contact-details
-      &-form
-        margin-top: 11px
-        margin-bottom: 31px
-        //max-width: 284px
-        grid-row: 7
-        grid-column: 1
-        grid-area: contact-form
     &__input
       flex-basis: 99%
       width: 100%
@@ -677,13 +699,11 @@
     &__title
       &_mb-25
         margin-bottom: 24px
-    &__ul
-      margin-left: -2px
     &__legal
-      margin-left: 2px
+      margin-left: 1px
     &__additional
-      margin-left: 2px
+      margin-left: 1px
     &__categories
-      margin-left: 2px
+      margin-left: 1px
     
     
