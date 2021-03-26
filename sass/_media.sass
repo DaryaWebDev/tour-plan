@@ -1,4 +1,4 @@
-@media (min-width: 993px)
+@media (min-width: 992px)
   .packages
     &-item
       &__button
@@ -71,7 +71,7 @@
         width: 100%
         height: 100%
         object-fit: cover
-  .ymap
+  .map
     &-container
       width: 350px
   .activities
@@ -140,7 +140,7 @@
   .hotel
     &__slider
       width: 100%
-  .ymap
+  .map
     &-container
       width: 340px
       height: 210px
@@ -371,7 +371,7 @@
     &__number
       position: relative
       right: 4px
-  .ymap
+  .map
     &-container
       width: 100%
   .newsletter
@@ -474,7 +474,14 @@
     &__slider
       height: 179px
       margin-bottom: 20px
-  .ymap
+    &-slider
+      &__button
+        background-size: 7px
+        &--prev
+          left: 5px
+        &--next
+          right: 3px
+  .map
     &-container
       max-height: 173px
   .hotel-right
@@ -513,7 +520,7 @@
           margin-right: -88px
   .activities
     padding-top: 40px
-    padding-bottom: 38px
+    padding-bottom: 40px
     &__card
       &_first
         order: 1
@@ -652,6 +659,14 @@
 
 
 @media (max-width: 320px)
+  .hotel
+    &-slider
+      &__button
+        background-size: 5px
+        &--prev
+          left: -3px
+        &--next
+          right: 0
   .packages
     &-item
       &__about
